@@ -11,5 +11,9 @@ Base router functionality built off some tutorial to quickly refresh react knowl
     * Verify active JWT
 * React Router
 
+## Included configurations
+* VSCode debug -- launch.json
+* ESLint settings -- .eslint
+* 
 #### Contact Information
 If you have any questions or comments feel free to email me: ozzadar@ozzadar.com
