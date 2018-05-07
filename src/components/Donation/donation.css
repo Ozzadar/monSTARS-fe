@@ -1,0 +1,37 @@
+.donationComponent {
+    display: inline-block;
+    margin: auto;
+    background-color: lightgrey;
+    width: 95%;
+    text-align:center;
+    min-height:200px;
+    vertical-align: middle;
+    
+}
+
+.donationComponent .innerContent {
+    margin-top:50px;
+}
+.donationComponent label {
+    margin-top: 5px;    
+    font-size: .75em;
+    display: block;
+    text-align: center;
+}
+
+.donationComponent input {
+    margin-top: 15px;
+    margin:auto;
+    display: block;
+    text-align: center;    
+}
+
+.donationComponent select {
+    margin-top: 15px;
+    display: block;  
+    margin:auto;  
+}
+
+.donationComponent div {
+    display: inline-block;
+}

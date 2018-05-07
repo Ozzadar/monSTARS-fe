@@ -99,7 +99,9 @@ class LoginStore extends EventEmitter {
         
     }
 
-
+    getCurrentJWT() {
+        return this.cookies.get('user-token');
+    }
 }
 
 const loginStore = new LoginStore();

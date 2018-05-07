@@ -9,9 +9,9 @@
 import React from 'react';
 import ReactModalLogin from 'react-modal-login';// eslint-disable-line
 import './UserComponent.css';
-import * as LoginActions from "../../actions/LoginActions";
 import UserButton from './UserButton'; // eslint-disable-line
 import jwt_decode from 'jwt-decode';
+import * as LoginActions from "../../../actions/LoginActions";
 
 
 export default class UserComponent extends React.Component {
@@ -135,9 +135,7 @@ export default class UserComponent extends React.Component {
         );
     }
 
-    Logout() {
-        LoginActions.Logout();
-    }
+
     /* ################# MODAL LOGIN FUNCTIONS ################# */
     
     initializeLoginModal() {
@@ -242,7 +240,10 @@ export default class UserComponent extends React.Component {
     }
 
     catchFailedLoginError(error) {
-        error.json().then(this.parseErrorBody.bind(this));
+        
+        if (Object.keys(error).length !== 0) {
+            error.json().then(this.parseErrorBody.bind(this));
+        }
         this.finishLoadingLogin();     
 
     }

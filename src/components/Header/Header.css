@@ -5,13 +5,17 @@
  * Licensed under the GNU General Public License v3.0 
  */
 
-
-
-div.header {
+body {
+    min-width: 470px;
+    font-size: .5em;
+}
+.header {
     background-color: #111;
     padding: 0;
+    font-size:.5em;
 }
-div.header a {
+
+.header a {
     display: inline;
     list-style-type: none;
     margin: 10px;
@@ -20,6 +24,14 @@ div.header a {
     text-decoration: none;
     padding: 20px;
     display: inline-block;
+
+
+    /* UNSELECTABLE */
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 .login-container label {
@@ -52,5 +64,4 @@ div.header a {
 
 .rightNav {
     float: right;
-    margin: 20px;
 }

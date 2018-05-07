@@ -12,13 +12,15 @@ import {
     BrowserRouter// eslint-disable-line
 } from 'react-router-dom';
 
-import Header from './components/Header';// eslint-disable-line
-
-import Home from './Home';
-import Stuff from './Stuff';
-import Contact from './Contact';
+import Header from './components/Header/Header';// eslint-disable-line
+import Footer from './components/Footer/Footer';
+import Home from './views/Home';
+import Stuff from './views/Stuff';
+import Contact from './views/Contact';
+import Profile from './views/Profile';
+import Donate from './views/Donate';
 import LoginStore from './stores/LoginStore';
-
+import './content.css'
 class Main extends React.Component {
 
     constructor(props) {
@@ -51,7 +53,12 @@ class Main extends React.Component {
                         <Route exact path="/" component ={Home}/>
                         <Route path="/stuff" component ={Stuff}/>
                         <Route path="/contact" component ={Contact}/>
+                        <Route path="/profile" component ={Profile} />
+                        <Route path="/donate" component ={Donate} />
                     </div>
+                    {this.state.currentUser === null ? '' : (<Footer />)}
+                    
+
                 </div>
             </BrowserRouter>
         );

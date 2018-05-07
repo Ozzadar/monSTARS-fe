@@ -1,0 +1,16 @@
+.profile-button {
+    top:-20px;
+    color: #FFF;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 0px;
+    display: block;
+    clear:both;
+}
+
+.my-thing2 {
+    display:block;
+    clear: both;
+    margin:0;
+    padding: 0;
+}
