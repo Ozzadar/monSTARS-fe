@@ -6,15 +6,11 @@
  */
 
 import React from 'react';
-import DonationComponent from '../components/Donation/DonationComponent';
-import {Redirect} from 'react-router-dom';
+import DonationComponent from '../components/Donation/DonationComponent'; // eslint-disable-line
+import {Redirect} from 'react-router-dom'; // eslint-disable-line
 import LoginStore from '../stores/LoginStore';
 
 class Donate extends React.Component {
-    constructor(props) {
-        super(props);
-
-    }
 
     render() {
         if (LoginStore.getCurrentUser() === null) {
@@ -27,7 +23,7 @@ class Donate extends React.Component {
             <div>
                 <h2>Support monSTARS</h2><br/>
                 <p>Would you like to support this site? If so, enter how much you'd like to donate and you'll be redirected to PayPal</p>
-                <DonationComponent />
+                <DonationComponent {...this.props}/>
             </div>
         );
     }

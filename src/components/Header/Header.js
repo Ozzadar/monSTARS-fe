@@ -24,7 +24,7 @@ export default class Header extends React.Component {
             <div>
                 <div className="header">
                         <NavLink exact to="/">Home</NavLink>
-                        <NavLink to="/stuff">Stuff</NavLink>
+                        <NavLink to="/game">Game</NavLink>
                         <NavLink to="/contact">Contact</NavLink>
                         <div className="rightNav">
                             <UserComponent currentUser={this.props.currentUser} />

@@ -8,7 +8,7 @@
 
 body {
   background-color: #FFCC00;
-  padding: 20px;
+
   margin: 0;
 }
 h1, h2, p, ul, li {
@@ -17,7 +17,6 @@ h1, h2, p, ul, li {
 
 .content {
   background-color: #FFF;
-  padding: 20px;
 }
 .content h2 {
   padding: 0;

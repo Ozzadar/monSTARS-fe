@@ -13,21 +13,23 @@ import {
 } from 'react-router-dom';
 
 import Header from './components/Header/Header';// eslint-disable-line
-import Footer from './components/Footer/Footer';
+import Footer from './components/Footer/Footer';// eslint-disable-line
 import Home from './views/Home';
 import Stuff from './views/Stuff';
 import Contact from './views/Contact';
 import Profile from './views/Profile';
 import Donate from './views/Donate';
 import LoginStore from './stores/LoginStore';
-import './content.css'
+import Game from './views/Game';
+
+import './content.css';
 class Main extends React.Component {
 
     constructor(props) {
         super(props);
 
         this.state = {
-            currentUser: LoginStore.getCurrentUser(),
+            currentUser: LoginStore.getCurrentUser()
         };
     }
 
@@ -46,8 +48,7 @@ class Main extends React.Component {
     render() {
         return (
             <BrowserRouter>
-                <div>
-                    <h1>monSTARS</h1>
+                <div style={{margin:0}}>
                     <Header currentUser={this.state.currentUser}/>
                     <div className="content">
                         <Route exact path="/" component ={Home}/>
@@ -55,6 +56,7 @@ class Main extends React.Component {
                         <Route path="/contact" component ={Contact}/>
                         <Route path="/profile" component ={Profile} />
                         <Route path="/donate" component ={Donate} />
+                        <Route path="/game" component ={Game} />
                     </div>
                     {this.state.currentUser === null ? '' : (<Footer />)}
                     
