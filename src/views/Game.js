@@ -1,5 +1,7 @@
 import React from 'react';
 import Unity from 'react-unity-webgl';
+import { RegisterExternalListener, UnityEvent } from "react-unity-webgl";
+import LoginStore from '../stores/LoginStore';
 
 export default class monSTARS extends React.Component {
     constructor(props) {
@@ -8,6 +10,14 @@ export default class monSTARS extends React.Component {
         this.state = {
             name: 'monSTARS'
         };
+
+        this.emitToken = new UnityEvent("WebsocketManager", "ReceiveToken");
+        RegisterExternalListener("GetToken", this.getToken.bind(this));
+    }
+
+
+    getToken() {
+        this.emitToken.emit(LoginStore.getCurrentJWT());
     }
 
     render() {
