@@ -11,13 +11,14 @@ export default class monSTARS extends React.Component {
             name: 'monSTARS'
         };
 
-        this.emitToken = new UnityEvent("WebsocketManager", "ReceiveToken");
+        this.emitToken = new UnityEvent("UserStateManager", "ReceiveToken");
         RegisterExternalListener("GetToken", this.getToken.bind(this));
     }
 
 
     getToken() {
         this.emitToken.emit(LoginStore.getCurrentJWT());
+        console.log('sending token to unity')
     }
 
     render() {
